@@ -2,6 +2,10 @@ def log = ''
 (1..10).each { log += it } //魔幻变量it
 assert log == '12345678910'
 
+log = ''
+(1..10).each { n -> log += n }
+assert log == '12345678910'
+
 //变量赋值声明闭包
 def printer = {line -> println line}
 
