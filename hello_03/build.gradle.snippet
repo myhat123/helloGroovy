@@ -1,0 +1,23 @@
+//调用 Project 的 apply 方法，关于参数，提供一个
+//只有一个键值对的 Map 。方法调用省略括号
+
+apply plugin: 'java'
+
+//通过调用 Project 的 setter 方法为项目设置版本属性
+
+version = '0.1'
+
+//调用 Project 的 repositories 方法，并传递一个闭包参数
+
+repositories {
+    mavenCentral()
+}
+
+//调用 Project 的 dependencies 方法，并传递一个闭包参数
+
+dependencies {
+
+    //调用闭包委托的对象的 compile 方法，用一个 String 作为参数，方法调用省略括号
+    compile 'commons-codec:commons-codec:1.6'
+    
+}
