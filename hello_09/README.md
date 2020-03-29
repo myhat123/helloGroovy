@@ -17,3 +17,17 @@ gradle test02   单独采用groovy类构建task
 gradle copy     从 src 目录中把文件拷贝到 dest 目录中
 
 gradle properties 显示项目属性
+
+解释
+===
+
+task hello {
+    println 'Hello world!'
+    println "Project name: ${project.name}"
+}
+
+参考资料 https://www.jianshu.com/p/e5de9538effa
+
+Project 其中有 getName()
+在 hello_01 中 BookBean.groovy 中有示例代码，所以：
+project.name 实际调用 project.getName()

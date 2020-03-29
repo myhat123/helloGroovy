@@ -1,5 +1,6 @@
 task hello {
     println 'Hello world!'
+    println "Project name: ${project.name}"
 }
 
 task test01 {
