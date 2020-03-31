@@ -18,3 +18,8 @@ hello_07  单元测试
 hello_08  gradle构建groovy代码
 hello_09  gradle task示例
 hello_10  groovy访问数据库示例
+
+备注
+====
+initdata 初始化数据
+load.groovy 访问数据库并导入数据
