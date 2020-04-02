@@ -13,3 +13,11 @@ gradle shadowJar
 会把所有需要的包打入hello_10-all.jar
 
 $ java -jar ./build/libs/hello_10-all.jar
+
+日期类型转换
+==========
+
+java.sql.Date, java.util.Date 两者区别不同
+代码中的字符串格式是‘2019-11-28’，在jdbc中是对应 java.sql.Date
+
+https://www.tutorialspoint.com/jdbc/jdbc-data-types.htm

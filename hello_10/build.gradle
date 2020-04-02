@@ -24,6 +24,7 @@ repositories {
 dependencies {
     // Use the latest Groovy version for building this library
     implementation 'org.codehaus.groovy:groovy-all:2.5.8'
+    implementation 'org.codehaus.groovy:groovy-dateutil:2.5.8'
     implementation 'org.postgresql:postgresql:42.2.11'
 
     // Use the awesome Spock testing and specification framework
