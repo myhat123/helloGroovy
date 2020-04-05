@@ -19,4 +19,4 @@ Groovy in Action 中文版 P175
 4. 一个 groovy 文件也许混合了类的声明和脚本代码，在这种情况下，脚本代码
 将变成一个主类被执行，因此不要声明一个与源文件同名的类。
 
-groovy Hello.groovy
+> groovy Hello.groovy

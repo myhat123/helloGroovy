@@ -1,9 +1,8 @@
-断言 assert
+基本语法
+=======
 
-脚本
-
-Bean
-
-GStrings
-
+断言 assert  
+脚本  
+Bean  
+GStrings  
 控制语句

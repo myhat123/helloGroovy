@@ -1,5 +1,6 @@
-gradle init
+> gradle init
 
+```
 $ gradle init
 Starting a Gradle Daemon (subsequent builds will be faster)
 
@@ -31,16 +32,17 @@ Get more help with your project: https://docs.gradle.org/6.2.2/userguide/tutoria
 
 BUILD SUCCESSFUL in 20s
 2 actionable tasks: 2 executed
+```
 
 构建jar包
 ========
-$ gradle build
+> $ gradle build
 
 执行
 ===
-$ java -cp $GROOVY_HOME/grooid/groovy-2.5.7-grooid.jar:./build/classes/groovy/main hello_08/App
+> $ java -cp $GROOVY_HOME/grooid/groovy-2.5.7-grooid.jar:./build/classes/groovy/main hello_08/App
 
-$ java -cp $GROOVY_HOME/grooid/groovy-2.5.7-grooid.jar:./build/libs/hello_08.jar hello_08.App
+> $ java -cp $GROOVY_HOME/grooid/groovy-2.5.7-grooid.jar:./build/libs/hello_08.jar hello_08.App
 
 单元测试
 =======
