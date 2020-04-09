@@ -32,6 +32,11 @@ groovy 本身自带了 groovy.util.CliBuilder
 这是groovy 2.4.7的文档及示例  
 http://docs.groovy-lang.org/2.4.7/html/gapi/groovy/util/CliBuilder.html
 
+
+> $ java -jar ./build/libs/hello_10-all.jar -l
+
+> $ java -jar ./build/libs/hello_10-all.jar -r
+
 resource文件
 ===========
 
