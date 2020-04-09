@@ -18,16 +18,22 @@ groovy-sql-2.5.8.jar
 日期类型转换
 ==========
 
-java.sql.Date, java.util.Date 两者区别不同
-代码中的字符串格式是‘2019-11-28’，在jdbc中是对应 java.sql.Date
+java.sql.Date, java.util.Date 两者区别不同  
+代码中的字符串格式是‘2019-11-28’，在jdbc中是对应 java.sql.Date  
 
 https://www.tutorialspoint.com/jdbc/jdbc-data-types.htm
 
 命令行参数
 =========
 
-java社区有多个处理命令行参数的包，如picocli, jcommander等
+java社区有多个处理命令行参数的包，如picocli, jcommander等  
 groovy 本身自带了 groovy.util.CliBuilder
 
-这是groovy 2.4.7的文档及示例
+这是groovy 2.4.7的文档及示例  
 http://docs.groovy-lang.org/2.4.7/html/gapi/groovy/util/CliBuilder.html
+
+resource文件
+===========
+
+把data.csv文件放入resources目录中，并打包进入jar中  
+http://docs.groovy-lang.org/latest/html/groovy-jdk/java/net/URL.html

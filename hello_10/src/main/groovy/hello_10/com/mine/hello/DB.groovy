@@ -34,7 +34,9 @@ class DB {
     def loaddata() {
         sql.connection.autoCommit = false
 
-        new File("/home/hzg/work/helloGroovy/initdata/data.csv").eachLine { line ->
+        def url = getClass().getResource('/data.csv')
+        //new File("/home/hzg/work/helloGroovy/initdata/data.csv").eachLine { line ->
+        url.eachLine { line ->
             def x = line.split(",")
             sql.execute """
                 INSERT INTO brch_qry_dtl (tran_date, timestampl, acc, amt, dr_cr_flag, rpt_sum)
