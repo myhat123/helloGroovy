@@ -14,6 +14,37 @@ class DB {
         sql = Sql.newInstance(url, user, password, driver)
     }
 
+    def create() {
+        sql.execute """
+            DROP TABLE if exists brch_qry_dtl;
+        """
+
+        sql.execute """
+            create table brch_qry_dtl (
+                acc character varying(19), 
+                tran_date date, 
+                amt numeric(16,2), 
+                dr_cr_flag integer, 
+                rpt_sum character varying(8), 
+                timestampl character varying(14)
+            );
+        """
+    }
+
+    def loaddata() {
+        sql.connection.autoCommit = false
+
+        new File("/home/hzg/work/helloGroovy/initdata/data.csv").eachLine { line ->
+            def x = line.split(",")
+            sql.execute """
+                INSERT INTO brch_qry_dtl (tran_date, timestampl, acc, amt, dr_cr_flag, rpt_sum)
+                VALUES (?::date, ?, ?, ?, ?, ?);
+            """, [x[0], x[1], x[2], x[3].toFloat(), x[4].toInteger(), x[5]]
+        }
+
+        sql.commit()
+    }
+
     //list子元素是map
     def getQryDtl(String tranDate, Integer flag) {
         def x = DateUtilStaticExtensions.parse(new java.util.Date(), 'yyyy-MM-dd', tranDate)

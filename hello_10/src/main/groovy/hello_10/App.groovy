@@ -3,21 +3,34 @@
  */
 package hello_10
 
+import groovy.util.CliBuilder
 import com.mine.hello.DB
 
 class App {
 
     static void main(String[] args) {
+        def cli = new CliBuilder(usage:'hello_10')
+        cli.l('初始化数据')
+        cli.r('读取数据表')
+        def options = cli.parse(args)
+
         def db = new DB()
         
-        def results = db.getQryDtl('2019-11-27', 1)
-        results.each() { x ->
-            println "${x['acc']}, ${x['amt']}, ${x['rpt_sum']}, ${x['tran_date']}"
-        }
+        if (options.l) {
+            db.create()
+            db.loaddata()
+        } else if (options.r) {        
+            def results = db.getQryDtl('2019-11-27', 1)
+            results.each() { x ->
+                println "${x['acc']}, ${x['amt']}, ${x['rpt_sum']}, ${x['tran_date']}"
+            }
 
-        def results_02 = db.getQryDtl_02('2019-11-28', 1)
-        results_02.each() { x ->
-            println "${x.acc}, ${x.amt}, ${x.rptSum}, ${x.tranDate}"
+            def results_02 = db.getQryDtl_02('2019-11-28', 1)
+            results_02.each() { x ->
+                println "${x.acc}, ${x.amt}, ${x.rptSum}, ${x.tranDate}"
+            }
+        } else {
+            cli.usage()
         }
     }
 }
