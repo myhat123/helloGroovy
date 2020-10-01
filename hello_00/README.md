@@ -1,6 +1,13 @@
 运行groovy
 =========
 
+参考资料  
+https://code-examples.net/zh-CN/q/197ab43
+
+groovy 2.5.13版本后，运行groovysh时，若需要处理def的变量，需要运行
+
+groovy:000> := interpreterMode
+
 第一种
 -----
 ```
